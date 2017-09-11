@@ -1,0 +1,158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8-giu-2016, 10.18.54
+    Author     : matteo
+*/
+body {
+    background-image: url("../images/Sfondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+
+}
+.navbar-brand{
+    font-weight: bold;
+}
+
+#voci-nav{
+    font-size: medium;
+}
+
+.jumbotron {
+    height: 30%;
+    width: 70%;
+    padding-top: 13%;
+    margin: 0 auto;
+    background: transparent;
+    
+}
+
+#buttonJumbotron{
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+#play{
+    height: 15%;  
+    width: 25%;
+    font-size: x-large;
+}
+
+#learn-more{
+    height: 15%;  
+    width: 25%;
+    font-size: x-large;
+
+}
+
+#titleDeserto{
+   text-align: center;
+   font-weight: bold;
+}
+
+#titleLearn{
+    text-align: center;
+    font-weight: bold;
+}
+
+#menu-levels{
+    width: 25%;
+    height: 20%;
+    margin:0 auto;
+    background-color: white;
+    border: solid black 3px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 4%;
+    text-align: center;
+}
+
+.tab{
+    height: 1%;
+}
+
+#levels{
+    text-align: center;
+}
+
+#titleGame{
+    font-size: 50px;   
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+
+#basics{
+    position:relative;
+}
+
+.lev{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background-color:#d9534f;
+}
+.nav>li{
+    display: block;
+}
+#mex{
+    position: absolute;
+    top:84%;
+    left:67%;
+    width:30%;
+}
+
+.header{
+    background-color: red;
+    width: 25%;
+    margin-top:20%;
+
+    text-align: center;
+}
+
+li>a{
+    font-size: 18px;
+}
+
+a{
+    color: #666666;
+}
+a:hover{
+    color: #666666;
+}
+
+#level{
+    width:13%;
+    position:absolute;
+    left: 66%;
+    margin-top: 0.1%;
+
+}
+
+.progress{
+    width:100%;
+    background-color:#cccccc;
+}
+
+.progress-bar{
+    background-color: #d9534f;
+}
+
+.alert{
+    font-size:20px;
+}

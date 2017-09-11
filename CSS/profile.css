@@ -1,0 +1,47 @@
+/* 
+    Created on : 4-lug-2016, 21.19.23
+    Author     : matte
+*/
+
+.container{
+    position:absolute;
+    top: 25%;
+}
+
+#tab-prof{
+    position:absolute;
+    left:30%;
+}
+#trophy{
+    position:absolute;
+    left: 37%;
+}
+.img{
+    padding: 10px 10px 10px 10px;
+}
+
+.text{
+    padding: 10px 10px 10px 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.glyphicon-tower {
+    font-size: 50px;
+}
+
+.completed{
+    color:#006600;
+}
+
+#container{
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 7%;
+    border-radius: 20%;
+}
+
+#info{
+    margin-top:6%;
+}
