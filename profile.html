@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+    <head>
+        <meta charset="UTF-8">
+        <!-- CSS import -->
+        <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="CSS/stile.css" rel="stylesheet">
+        <link href="CSS/profile.css" rel="stylesheet" type="text/css"/>
+        <!-- JS import -->
+        <script src="JavaScript/jquery.min.js" type="text/javascript"></script>
+        <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>       
+        <script src="JavaScript/getParameter.js" type="text/javascript"></script>
+        <title>Profile</title>
+    </head>
+    <body>
+        <div id="menu">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">Learn JavaScript</a>
+                    </div>
+                    <!-- Voci della navbar -->
+                    <div class="collapse navbar-collapse" id="voci-nav">
+                        <ul id="nav" class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Gioca!<span class="caret"></span></a>
+                                  <ul class="dropdown-menu" id="gioca">
+                                       <li><a href="game.html">Livelli</a></li>
+                                  </ul>
+                            </li>  
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Informazioni utili<span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                       <li><a href="learnMore.html">Per Saperne di piu'...</a></li>
+                                      <li><a href="tutorial.html">Tutorial</a></li>
+                                      <li><a href="aboutUs.html"> Contatti</a></li> 
+                                  </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        
+        
+        <!-- profile -->
+      
+        <!-- tab di scorrimento -->
+        <ul class="nav nav-tabs" id="tab-prof">
+            <li class="active"><a data-toggle="tab" href="#info" style="font-size: 25px"><b>Informazioni Personali</b></a></li>
+            <li><a data-toggle="tab" href="#trophy" style="font-size: 25px"><b>Trofei</b></a></li>
+        </ul>
+        <div id="container" class="container">
+            <div class="row">
+            <!-- left column -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                     <div class="text-center">
+                        <img id="profile-image" src="" class="avatar img-circle img-thumbnail" alt="avatar" onError="this.src = 'images/user.png'" style="width: 250px; height: 250px;">
+                        <h6>Carica una nuova foto</h6>
+                        <form action="PHP/upload.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="fileToUpload" id="fileToUpload" class="text-center center-block well well-sm">
+                            <input type="submit" value="Carica immagine" name="submit" class="text-center center-block well well-sm">
+                        </form>
+                        
+                    </div>
+                </div>
+                 <!-- contenuto del tab-->
+                <div class=" tab-content" id="tab-cont">
+                    <div class="col-md-8 col-sm-6 col-xs-12 personal-info tab-pane fade in active" id="info">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Nome:</label>
+                            <div class="col-lg-8">
+                                <input id="name" class="form-control" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Cognome:</label>
+                            <div class="col-lg-8">
+                                <input id="surname" class="form-control" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Email:</label>
+                            <div class="col-lg-8">
+                                <input id="email" class="form-control" type="text" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">Username:</label>
+                            <div class="col-md-8">
+                                <input id="username" class="form-control" type="text" disabled>
+                            </div>
+                        </div>           
+                    </div>
+                    <!-- visualizza trofei -->
+                    <div id="trophy" class="tab-pane fade">
+                        <table id="table-trof">
+                            <tr>
+                                <td id="1"><span class="glyphicon glyphicon-tower img"></span> </td>
+                                <td id="2"><span class="glyphicon glyphicon-tower img"></span> </td> 
+                                <td id="3"><span class="glyphicon glyphicon-tower img"></span> </td>
+                                <td id="debug"><span class="glyphicon glyphicon-tower img"></span> </td> 
+                            </tr>
+                            <tr>
+                                <td id="text1" class="text">Completa Livello 1</td>
+                                <td id="text2" class="text">Completa Livello 2</td> 
+                                <td id="text3" class="text">Completa Livello 3</td>
+                                <td id="debug-text" class="text">Debug King</td>
+                            </tr>
+                            <tr>
+                                <td id="4"><span class="glyphicon glyphicon-tower img"></span> </td>
+                                <td id="5"><span class="glyphicon glyphicon-tower img"></span> </td> 
+                                <td id="6"><span class="glyphicon glyphicon-tower img"></span> </td>
+                                <td id="refactor"><span class="glyphicon glyphicon-tower img"></span> </td>
+                            </tr>
+                            <tr>
+                                <td id="text4" class="text">Completa Livello 4</td>
+                                <td id="text5" class="text">Completa Livello 5</td> 
+                                <td id="text6" class="text">Completa Livello 6</td>
+                                <td id="refactor-text" class="text">Refactor King</td>
+                            </tr>
+                            <tr>
+                                <td id="7"><span class="glyphicon glyphicon-tower img"></span> </td>
+                                <td id="8"><span class="glyphicon glyphicon-tower img"></span> </td> 
+                                <td id="9"><span class="glyphicon glyphicon-tower img"></span> </td>
+                                <td id="design"><span class="glyphicon glyphicon-tower img"></span> </td>
+                            </tr>
+                            <tr>
+                                <td id="text7" class="text">Completa Livello 7</td>
+                                <td id="text8" class="text">Completa Livello 8</td> 
+                                <td id="text9" class="text">Completa Livello 9</td>
+                                <td id="design-text" class="text">Design King</td>
+                            </tr>
+
+                        </table> 
+                    </div>
+                </div> <!--end of tab-cont -->     
+            </div>
+        </div>
+        <div id="mex"></div>
+        
+        <script src="JavaScript/checkLog.js" type="text/javascript"></script> 
+        <script>$("#profile-image").attr("src","images/"+ userJSON.result.id + ".jpg");</script>      
+        <script>
+            if(userJSON.result=="false")
+                window.location.href = 'login.html?mex=must_log';
+            $(window).load(function (){
+                var mex=getUrlParameter("mex");
+
+                switch(mex){
+                    case "log_succ":
+                        $('#mex').html("<div class='alert alert-success fade in'><strong>Login avvenuto!</strong></span></div>");
+                        break;
+                    case "reg_succ":
+                        $('#mex').html("<div class='alert alert-success fade in'><strong>Registrazione avvenuta!</strong></span></div>");
+                        break;
+                    case "large":
+                        $('#mex').html("<div class='alert alert-danger fade in'><strong>Spiacente, il file è troppo grande</strong></span></div>");
+                        break;
+                    case "type":
+                        $('#mex').html("<div class='alert alert-danger fade in'><strong>Spiacente, solo formati JPG, JPEG, PNG sono consentiti!</strong></span></div>");
+                        break;
+                    case "not-image":
+                        $('#mex').html("<div class='alert alert-danger fade in'><strong>Il file non è un immagine.</strong></span></div>");
+                        break;
+                    case "upload":
+                        $('#mex').html("<div class='alert alert-success fade in'><strong>Immagine cambiata con successo!</strong></span></div>");
+                        break;
+                    case "err-upload":
+                        $('#mex').html("<div class='alert alert-danger fade in'><strong>Spiacente, c'è un problema con il caricamento</strong></span></div>");
+                        break;
+                };
+                setTimeout(function(){
+                   $(".alert").alert('close');
+                },5000);        
+            });
+        </script>
+ 
+    </body>
+</html>

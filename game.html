@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+    <head>
+        <title>Playing...</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS import -->
+        <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="CSS/stile.css" rel="stylesheet">
+        <!-- JS import -->
+        <script src="JavaScript/jquery.min.js" type="text/javascript"></script>
+        <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+         <!-- Navbar-->
+        <div id="menu">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                <!-- Brand -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">Learn JavaScript</a>
+                    </div>
+                    <!-- Voci della navbar -->
+                    <div class="collapse navbar-collapse" id="voci-nav">
+                        <ul id="nav" class="nav navbar-nav"> 
+                            <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Gioca!<span class="caret"></span></a>
+                              <ul class="dropdown-menu" id="gioca">
+                                   <li><a href="game.html">Livelli</a></li>
+                              </ul>
+                            </li>  
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Informazioni utili<span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                       <li><a href="learnMore.html">Per Saperne di piu'...</a></li>
+                                      <li><a href="tutorial.html">Tutorial</a></li>
+                                      <li><a href="aboutUs.html"> Contatti</a></li> 
+                                  </ul>
+                            </li>                        
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <p id="titleGame" class="title">Scegli un livello</p>
+
+        <div id="menu-levels">
+
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active"><a href="#basics" data-toggle="tab">Debugging</a></li>
+                <li role="presentation"><a href="#refactor" data-toggle="tab">Refactoring</a></li>
+                <li role="presentation"><a href="#design" data-toggle="tab">Designing</a></li>
+            </ul>
+
+            
+            <div id="levels" class="tab-content clearfix">
+                <div id="basics" class="tab-pane fade in active tab">
+                    <a href="level.html?id=1&check=init"><button id="1" type="button" class="btn btn-danger btn-lg lev" disabled="">Livello 1</button></a>
+                    <a href="level.html?id=2&check=init"><button id="2" type="button" class="btn btn-danger btn-lg lev" disabled="">Livello 2</button></a>
+                    <a href="level.html?id=3&check=init"><button id="3" type="button" class="btn btn-danger btn-lg lev" disabled="">Livello 3</button></a>
+                </div>
+                <div id="refactor" class="tab-pane fade in tab">
+                    <a href="level.html?id=4&check=init"><button id="4" type="button" class="btn btn-danger btn-lg lev " disabled="">Livello 4</button> </a>
+                    <a href="level.html?id=5&check=init"><button id="5" type="button" class="btn btn-danger btn-lg lev" disabled="">Livello 5</button> </a>
+                    <a href="level.html?id=6&check=init"><button id="6" type="button" class="btn btn-danger btn-lg lev" disabled="">Livello 6</button> </a>
+                </div>
+                <div id="design" class="tab-pane fade in tab">
+                    <a href="level.html?id=7&check=init"><button id="7" type="button" class="btn btn-danger btn-lg lev" disabled="">Livello 7</button> </a>
+                    <a href="level.html?id=8&check=init"><button id="8" type="button" class="btn btn-danger btn-lg lev" disabled="">Livello 8</button> </a>
+                    <a href="level.html?id=9&check=init"><button id="9" type="button" class="btn btn-danger btn-lg lev" disabled="">Livello 9</button> </a>                 
+                </div>
+            </div>
+            
+        </div>
+
+        <script src="JavaScript/checkLog.js" type="text/javascript"></script>
+        <script src="JavaScript/checkLevel.js" type="text/javascript"></script>
+
+        <script>
+            if(userJSON.result=="false") // in caso non sia loggato
+                window.location.href = 'login.html?mex=must_log';
+        </script>
+    </body>
+    
+</html>
+

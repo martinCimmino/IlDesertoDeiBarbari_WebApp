@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache"> 
+	<head>
+            <meta charset="UTF-8">
+            <title>Play...</title>
+            <!-- CSS -->
+            <link href="plugin/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css"/>
+            <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+            <link href="CSS/stile.css" rel="stylesheet">
+            <link href="plugin/codemirror/addon/hint/show-hint.css" rel="stylesheet" type="text/css"/>
+            <link rel="stylesheet" href="plugin/codemirror/addon/lint/lint.css">
+            <link href="CSS/level.css" rel="stylesheet" type="text/css"/>
+             <!-- javascript -->
+            <!-- jquery deve essere il primo file importato -->
+            <script src="JavaScript/jquery.min.js" type="text/javascript"></script>
+            <script src="plugin/codemirror/lib/codemirror.js" type="text/javascript"></script>
+            <script src="plugin/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
+            <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+            <script src="plugin/codemirror/addon/hint/show-hint.js" type="text/javascript"></script>
+            <script src="plugin/codemirror/addon/hint/javascript-hint.js" type="text/javascript"></script>
+            <script src="JavaScript/getParameter.js" type="text/javascript"></script>
+            <script src="//ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script>
+            <script src="plugin/codemirror/addon/lint/lint.js"></script>
+            <script src="plugin/codemirror/addon/lint/javascript-lint.js"></script>
+            <script src="plugin/codemirror/addon/lint/css-lint.js"></script>
+            <script src="JavaScript/points.js" type="text/javascript"></script>
+	</head>
+        <body>
+            <div id="menu">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <!-- Brand -->
+                        <div class="navbar-header">
+                            <a id="brand" class="navbar-brand" href="index.html">Learn JavaScript</a>
+                        </div>
+                        <!-- Voci della navbar -->
+                        <div class="collapse navbar-collapse" id="voci-nav">
+                            <ul id="nav" class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Gioca!<span class="caret"></span></a>
+                                      <ul class="dropdown-menu" id="gioca">
+                                           <li><a href="game.html">Livelli</a></li>
+                                      </ul>
+                                </li>  
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Informazioni utili<span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                           <li><a href="learnMore.html">Per Saperne di piu'...</a></li>
+                                          <li><a href="tutorial.html">Tutorial</a></li>
+                                          <li><a href="aboutUs.html"> Contatti</a></li> 
+                                      </ul>
+                                </li>                     
+                                <li id="orders"><a href="#">Rogers <span class="glyphicon glyphicon-info-sign"></span></a></li>
+                                <li id="help" ><a href="#" class="disabled" id="help1">Claiton<span class="glyphicon glyphicon-question-sign"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!-- Alert -->
+            <div id="mex"></div>
+            <div id="result"></div>
+            <div id="trophy"></div>
+            <div id="points"></div>
+            <div id="gift"></div>
+             <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" id="esc">&times;</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div id="modal-body" class="modal-body">
+                      <div id="image"></div>
+                      <p id="text"></p>
+                  </div>
+                  <div class="modal-footer">
+                      <a data-toggle="modal" data-target="#myModal2" class="btn btn-danger" id="modal-button" data-dismiss="modal" ></a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+             
+             <div class="modal fade" id="myModal2" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" id="esc">&times;</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div id="modal-body" class="modal-body">
+                      <p id="specific"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+     
+            <div id="codice">
+                <div style="text-align: center; font-size: 24px; font-weight: bold">
+                    <p id="numlev"></p>
+                </div>
+                <textarea id="code" name="code"></textarea>
+              
+                <button type="button" class="btn btn-danger btn-lg" id="undo">Undo</button>
+                <button type="button" class="btn btn-danger btn-lg" id="save">Salva e prova</button>
+            </div>
+        
+             <canvas  id="canvas" width="480" height="480" onmouseover='MC.re_run()' onmouseout='MC.pause()' oncontextmenu="return false;"></canvas>
+            <script id="script" src="" type="text/javascript"></script>
+
+            <script src="JavaScript/checkLog.js" type="text/javascript"></script>
+            <script src="JavaScript/confLevel.js"></script>
+            
+            <script>
+                if(userJSON.result=="false")
+                    window.location.href = 'login.html?mex=must_log';
+                
+                try{
+                    MC.init();
+                }
+                catch(err){
+                    window.location.replace("level.html?id="+parametro+"&check=crit");
+                }
+            </script>
+            
+          
+	</body>
+</html>
+
